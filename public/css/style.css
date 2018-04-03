@@ -251,3 +251,35 @@ div.feeds-holder {
   width: 102%;
   border-radius: 3px 0 0 3px;
 }
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+  color: #fff;
+}
+
+.navbar-default {
+  background-color: #08223c;
+  border-color: #08223c;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color:#40C4FF;
+}
+
+.navbar-default .navbar-nav>.open>a:focus {
+  background-color: transparent;
+  color: rgb(17.4%, 54.8%, 84.3%);
+  text-shadow: #fff 0 0 8px;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover {
+  background-color: transparent;
+  color: #40C4FF;
+}
+
+
