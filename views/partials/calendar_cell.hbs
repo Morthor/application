@@ -12,21 +12,46 @@
     {{/if}}
     {{# if day.is_current_day }}current_day_cell{{/if}}
 ">
-<span
+<span class="team-view-popover"
   {{#unless day.is_bank_holiday}}
     {{#unless day.is_weekend}}
       {{# with  day.leave_obj }}
         {{#if this }}
-          data-toggle="tooltip"
+          
           data-placement="top"
-          title="
+          data-toggle="popover"
+          data-trigger="hover" data-container="#team-view-table"
+          {{#if this.employee_comment}}
+            data-content="{{this.employee_comment}}"
+            title="
+              {{#if ../../day.is_current_day}}Today{{/if}}
+              {{#if this.is_new_leave}}New absence waiting approval{{/if}}
+              {{#if this.is_pended_revoke_leave}}Revoked waiting for approval{{/if}}
+              {{#if this.is_approved_leave}}
+                {{#unless this.is_pended_revoke_leave}}Approved absence{{/unless}}
+              {{/if}}
+            "
+            
+          {{else}}
+            data-content="
+              {{#if ../../day.is_current_day}}Today{{/if}}
+              {{#if this.is_new_leave}}New absence waiting approval{{/if}}
+              {{#if this.is_pended_revoke_leave}}Revoked waiting for approval{{/if}}
+              {{#if this.is_approved_leave}}
+                {{#unless this.is_pended_revoke_leave}}Approved absence{{/unless}}
+              {{/if}}
+            "
+          {{/if}}
+           
+        {{/if}}
+          data-content="
             {{#if ../../day.is_current_day}}Today{{/if}}
             {{#if this.is_new_leave}}New absence waiting approval{{/if}}
             {{#if this.is_pended_revoke_leave}}Revoked waiting for approval{{/if}}
             {{#if this.is_approved_leave}}
               {{#unless this.is_pended_revoke_leave}}Approved absence{{/unless}}
-            {{/if}}"
-        {{/if}}
+            {{/if}}
+          "
       {{/with}}
     {{/unless}}
   {{/unless}}
