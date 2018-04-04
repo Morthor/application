@@ -16,6 +16,7 @@
           <th>Type</th>
           <th>Deducted</th>
           <th>Approved by</th>
+          <th>Comment</th>
           <th></th>
           <th><span class="pull-right">Status</span></th>
         </tr>
@@ -29,6 +30,11 @@
         <td>{{ this.leave_type.name }}{{#if this.is_pended_revoke_leave}}<br>(pended revoke){{/if}}</td>
         <td>{{ this.get_deducted_days_number }}</td>
         <td class="user-request-table-approver">{{#with this.approver}}{{this.full_name}}{{/with}}</td>
+        <td>
+          <div {{#if employee_comment_larger_than_limit}}data-toggle="tooltip" data-placement="bottom" title="{{employee_comment}}"{{/if}}>
+            {{shorten_comment_string employee_comment}}
+          </div>
+        </td>
         <td>
           {{# if this.is_approved_leave }}
           {{# unless this.is_pended_revoke_leave}}
