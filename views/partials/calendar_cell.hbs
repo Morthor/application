@@ -18,9 +18,9 @@
       {{# with  day.leave_obj }}
         {{#if this }}
           data-placement="top"
-          data-toggle="popover"
-          data-trigger="hover" data-container="#team-view-table"
-          data-content="
+          data-toggle="tooltip"
+          data-container="#team-view-table"
+          title="
             {{#if ../../day.is_current_day}}Today{{/if}}
             {{#if this.is_new_leave}}New absence waiting approval{{/if}}
             {{#if this.is_pended_revoke_leave}}Revoked waiting for approval{{/if}}
@@ -35,12 +35,14 @@
 
   {{#if day.is_current_day}}
     data-toggle="tooltip"
+    data-container="#team-view-table"
     data-placement="top"
     title="Today"
   {{/if}}
 
   {{#if day.is_bank_holiday}}
     data-toggle="tooltip"
+    data-container="#team-view-table"
     data-placement="top"
     title="Bank holiday"
   {{/if}}
