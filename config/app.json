@@ -1,6 +1,6 @@
 {
   "allow_create_new_accounts" : true,
-  "send_emails"              : false,
+  "send_emails"              : true,
   "send_slacks": false,
   "slack_settings":{
     "token": "xoxp-200500485780-200451086578-337639356630-7fbc8779c8ea1350230afdfd9532a901",
@@ -8,16 +8,20 @@
     "bot_name": "TimeOff Bot"
   },
   "application_sender_email" : "email@test.com",
-  "email_transporter" : {
-    "host" : "localhost",
-    "port" : 25,
-    "auth" : {
-      "user" : "user",
-      "pass" : "pass"
+  "email_transporter": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "secure": false,
+    "auth": {
+      "user": "cp.gib.holidays@gmail.com",
+      "pass": "CentralProductGibraltarHolidays2@"
+    },
+    "tls": {
+      "ciphers": "SSLv3"
     }
   },
   "ga_analytics_on" : false,
   "crypto_secret" : "!2~`HswpPPLa22+=±§sdq qwe,appp qwwokDF_",
-  "application_domain" : "http://app.timeoff.management",
+  "application_domain" : "http://localhost:3000",
   "promotion_website_domain" : "http://timeoff.management"
 }
