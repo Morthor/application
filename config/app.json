@@ -1,5 +1,5 @@
 {
-  "allow_create_new_accounts" : true,
+  "allow_create_new_accounts" : false,
   "send_emails"              : true,
   "send_slacks": false,
   "slack_settings":{
