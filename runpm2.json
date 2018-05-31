@@ -1,0 +1,9 @@
+[
+  { 
+    "name" : "timeoff", 
+    "script" : "bin/wwww", 
+    "env" : {
+      "NODE_ENV": "production",
+    } 
+  }
+]
