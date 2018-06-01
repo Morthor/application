@@ -5,7 +5,7 @@
   "slack_settings":{
     "token": "xoxp-200500485780-200451086578-337639356630-7fbc8779c8ea1350230afdfd9532a901",
     "icon_url": "https://emoji.slack-edge.com/T02D11B4K/williamhill/1d6fb5f835d3aace.jpg",
-    "bot_name": "TimeOff Bot"
+    "bot_name": "HolidaysJS Bot"
   },
   "application_sender_email" : "email@test.com",
   "email_transporter": {
